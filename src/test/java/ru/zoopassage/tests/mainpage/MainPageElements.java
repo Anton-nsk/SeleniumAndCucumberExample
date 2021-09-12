@@ -7,5 +7,4 @@ public class MainPageElements {
 
     @FindBy(xpath = "//*[@id = 'smart-title-search-input-test']")
     protected static WebElement searchInput;
-
 }

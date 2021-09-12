@@ -22,11 +22,11 @@ public class SearchPageElements {
     @FindBy(xpath = "//*[@class = 'navbar__cart-item-amount']")
     protected WebElement counterGoodOfCart;
 
-    public WebElement productOptionSelected(String weight) {
-        return driver.findElement(By.xpath(String.format("//*[@class = 'product-option']/div[text() = '%s']", weight)));
-    }
-
     public SearchPageElements() {
         PageFactory.initElements(driver, this);
+    }
+
+    public WebElement productOptionSelected(String weight) {
+        return driver.findElement(By.xpath(String.format("//*[@class = 'product-option']/div[text() = '%s']", weight)));
     }
 }

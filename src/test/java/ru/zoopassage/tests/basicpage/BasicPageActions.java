@@ -16,14 +16,14 @@ public class BasicPageActions extends BasicPageElement {
         driver.get(url);
     }
 
-    @Step("Проверям, что страница загрузилась корректно")
-    public void checkOpenedPage() {
-        Assert.assertTrue("Лого не отображается", logo.isDisplayed());
-    }
-
     @Step("Проверяем, что открыта требуемая страница")
     public static void checkOpenNeedPage(String namePage) {
         Assert.assertEquals("Найден больше чем 1 элемент", namePage, title.getText());
+    }
+
+    @Step("Проверям, что страница загрузилась корректно")
+    public void checkOpenedPage() {
+        Assert.assertTrue("Лого не отображается", logo.isDisplayed());
     }
 
     @Step("Переходим в корзину")

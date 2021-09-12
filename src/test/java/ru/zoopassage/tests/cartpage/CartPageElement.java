@@ -20,15 +20,15 @@ public class CartPageElement {
     @FindBy(xpath = "//*[@class = 'errortext'][text() = 'Ваша корзина пуста']")
     protected WebElement cartIsEmpty;
 
+    public CartPageElement() {
+        PageFactory.initElements(driver, this);
+    }
+
     protected WebElement deletePositionByName(String nameGood) {
         return driver.findElement(By.xpath(String.format("//div[@data-item-name = '%s']//*[@class = 'pagecart-positions-cost__remove']", nameGood)));
     }
 
     protected WebElement nameGoodInCart(String nameGood) {
         return driver.findElement(By.xpath(String.format("//div[@data-item-name = '%s']", nameGood)));
-    }
-
-    public CartPageElement() {
-        PageFactory.initElements(driver, this);
     }
 }

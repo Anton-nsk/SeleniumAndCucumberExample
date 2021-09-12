@@ -8,18 +8,18 @@ import org.openqa.selenium.WebDriver;
 
 public class TearDown {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public TearDown() {
         this.driver = Setup.driver;
     }
 
     @After
-    public void quitDriver(Scenario scenario){
-        if(scenario.isFailed()){
+    public void quitDriver(Scenario scenario) {
+        if (scenario.isFailed()) {
             saveScreenshotsForScenario(scenario);
         }
-        this.driver.quit();
+        driver.quit();
     }
 
     private void saveScreenshotsForScenario(final Scenario scenario) {

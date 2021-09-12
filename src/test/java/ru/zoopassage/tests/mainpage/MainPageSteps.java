@@ -11,7 +11,7 @@ public class MainPageSteps {
     }
 
     @Тогда("Ищем товар с названием \"([^\"]*)\"$")
-    public  void searchGood(String goodName) {
+    public void searchGood(String goodName) {
         MainPageActions.searchGoodForName(goodName);
     }
 }

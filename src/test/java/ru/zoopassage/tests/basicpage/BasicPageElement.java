@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class BasicPageElement {
 
-    @FindBy(xpath = "//*[@id = 'header']//img[@alt='Зоо Пассаж']")
-    protected  WebElement logo;
-    @FindBy(id = "bx_basketT0kNhm")
-    protected  WebElement btnCart;
     @FindBy(id = "zag1")
     protected static WebElement title;
+    @FindBy(xpath = "//*[@id = 'header']//img[@alt='Зоо Пассаж']")
+    protected WebElement logo;
+    @FindBy(id = "bx_basketT0kNhm")
+    protected WebElement btnCart;
 }
